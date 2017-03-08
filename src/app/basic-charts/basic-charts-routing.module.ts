@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BasicChartsComponent }   from './basic-charts.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
 import { ForceDirectedGraphComponent } from './force-directed-graph/force-directed-graph.component';
+import { BubbleChartComponent } from './bubble-chart/bubble-chart.component';
 
 const routes: Routes = [
   {
@@ -11,7 +12,8 @@ const routes: Routes = [
     component: BasicChartsComponent,
     children: [
       { path: 'line-chart',  component: LineChartComponent },
-      { path: 'force-directed-graph',  component: ForceDirectedGraphComponent }
+      { path: 'force-directed-graph',  component: ForceDirectedGraphComponent },
+      { path: 'bubble-chart',  component: BubbleChartComponent }
     ]
   }
 ];
@@ -21,5 +23,6 @@ const routes: Routes = [
   exports: [ RouterModule ]
 })
 export class BasicChartsRoutingModule {
-  static components = [ BasicChartsComponent, LineChartComponent, ForceDirectedGraphComponent ];
+  static components = [ BasicChartsComponent, LineChartComponent,
+  ForceDirectedGraphComponent, BubbleChartComponent ];
 }
